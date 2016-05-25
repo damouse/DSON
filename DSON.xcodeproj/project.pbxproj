@@ -33,7 +33,7 @@
 		A215942C1B94D79300F2F665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A21594411B94D7CD00F2F665 /* Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
 		A21594491B94D85C00F2F665 /* DSON.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = DSON.podspec; sourceTree = "<group>"; };
-		A2A8279B1BD1D56D00E45CAA /* Silvery.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Silvery.playground; sourceTree = "<group>"; };
+		A2A8279B1BD1D56D00E45CAA /* DSON.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = DSON.playground; path = ../../../../Damouse/code/swift/dson/DSON.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				A21594491B94D85C00F2F665 /* DSON.podspec */,
-				A2A8279B1BD1D56D00E45CAA /* Silvery.playground */,
+				A2A8279B1BD1D56D00E45CAA /* DSON.playground */,
 			);
 			name = Meta;
 			sourceTree = "<group>";
@@ -71,7 +71,7 @@
 				50AA9E921CDA77470035B484 /* Info.plist */,
 			);
 			name = DSONTests;
-			path = SilveryTests;
+			path = ../../../../Damouse/code/swift/dson/DSONTests;
 			sourceTree = "<group>";
 		};
 		A215941D1B94D79300F2F665 = {
@@ -101,7 +101,7 @@
 				A215942C1B94D79300F2F665 /* Info.plist */,
 			);
 			name = DSON;
-			path = Silvery;
+			path = ../../../../Damouse/code/swift/dson/DSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +240,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
-				INFOPLIST_FILE = SilveryTests/Info.plist;
+				INFOPLIST_FILE = DSONTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.damouse.SilveryTests;
@@ -253,7 +253,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
-				INFOPLIST_FILE = SilveryTests/Info.plist;
+				INFOPLIST_FILE = DSONTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.damouse.SilveryTests;
@@ -359,7 +359,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Silvery/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/../../../../Damouse/code/swift/dson/DSON/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.damouse.silvery;
@@ -377,7 +377,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Silvery/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/../../../../Damouse/code/swift/dson/DSON/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.damouse.silvery;
