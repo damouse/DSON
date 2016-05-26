@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BFE1312DD67EA622034F64C /* Pods_DSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ACC1621CA3BD75646A8CCE /* Pods_DSON.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		50AA9E911CDA77470035B484 /* ConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AA9E901CDA77470035B484 /* ConversionTests.swift */; };
 		50AA9EA11CDA792B0035B484 /* DSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21594271B94D79300F2F665 /* DSON.framework */; };
 		50FE49751CF7994A0073806E /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE49741CF7994A0073806E /* Class.swift */; };
+		50FE49791CF79CAA0073806E /* ClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE49781CF79CAA0073806E /* ClassTests.swift */; };
+		7D6304B7C3F36EE75043C996 /* Pods_DSONTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3B511960A13B1356AB3ED1 /* Pods_DSONTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		A215942B1B94D79300F2F665 /* DSON.h in Headers */ = {isa = PBXBuildFile; fileRef = A215942A1B94D79300F2F665 /* DSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A21594421B94D7CD00F2F665 /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21594411B94D7CD00F2F665 /* Convertible.swift */; };
 		A215944A1B94D85C00F2F665 /* DSON.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A21594491B94D85C00F2F665 /* DSON.podspec */; };
@@ -26,16 +29,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		390E9E90612208D4F6156DAF /* Pods-DSONTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSONTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DSONTests/Pods-DSONTests.release.xcconfig"; sourceTree = "<group>"; };
 		50AA9E8E1CDA77470035B484 /* DSON.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSON.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AA9E901CDA77470035B484 /* ConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionTests.swift; sourceTree = "<group>"; };
 		50AA9E921CDA77470035B484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50FE49741CF7994A0073806E /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
+		50FE49781CF79CAA0073806E /* ClassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassTests.swift; sourceTree = "<group>"; };
+		63ACC1621CA3BD75646A8CCE /* Pods_DSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D60D798B666BE3D4040E4A /* Pods-DSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSON.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DSON/Pods-DSON.debug.xcconfig"; sourceTree = "<group>"; };
 		A21594271B94D79300F2F665 /* DSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A215942A1B94D79300F2F665 /* DSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSON.h; sourceTree = "<group>"; };
 		A215942C1B94D79300F2F665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A21594411B94D7CD00F2F665 /* Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
 		A21594491B94D85C00F2F665 /* DSON.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = DSON.podspec; sourceTree = "<group>"; };
 		A2A8279B1BD1D56D00E45CAA /* DSON.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = DSON.playground; path = ../../../../Damouse/code/swift/dson/DSON.playground; sourceTree = "<group>"; };
+		AE3B511960A13B1356AB3ED1 /* Pods_DSONTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSONTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0124D0BB173C6F5690ACA67 /* Pods-DSONTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSONTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DSONTests/Pods-DSONTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFBB751B399BC651C037DB1E /* Pods-DSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSON.release.xcconfig"; path = "Pods/Target Support Files/Pods-DSON/Pods-DSON.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50AA9EA11CDA792B0035B484 /* DSON.framework in Frameworks */,
+				7D6304B7C3F36EE75043C996 /* Pods_DSONTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BFE1312DD67EA622034F64C /* Pods_DSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,10 +82,31 @@
 			isa = PBXGroup;
 			children = (
 				50AA9E901CDA77470035B484 /* ConversionTests.swift */,
+				50FE49781CF79CAA0073806E /* ClassTests.swift */,
 				50AA9E921CDA77470035B484 /* Info.plist */,
 			);
 			name = DSONTests;
 			path = ../../../../Damouse/code/swift/dson/DSONTests;
+			sourceTree = "<group>";
+		};
+		953A62C72CB1638F783F34D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63ACC1621CA3BD75646A8CCE /* Pods_DSON.framework */,
+				AE3B511960A13B1356AB3ED1 /* Pods_DSONTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E239AE7E42B6425F4A097EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64D60D798B666BE3D4040E4A /* Pods-DSON.debug.xcconfig */,
+				DFBB751B399BC651C037DB1E /* Pods-DSON.release.xcconfig */,
+				C0124D0BB173C6F5690ACA67 /* Pods-DSONTests.debug.xcconfig */,
+				390E9E90612208D4F6156DAF /* Pods-DSONTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		A215941D1B94D79300F2F665 = {
@@ -83,6 +116,8 @@
 				50AA9E8F1CDA77470035B484 /* DSONTests */,
 				50A3135F1CDAB66C007D0B7F /* Meta */,
 				A21594281B94D79300F2F665 /* Products */,
+				9E239AE7E42B6425F4A097EE /* Pods */,
+				953A62C72CB1638F783F34D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50AA9E961CDA77470035B484 /* Build configuration list for PBXNativeTarget "DSONTests" */;
 			buildPhases = (
+				2648107BD619DB76356C25EA /* Check Pods Manifest.lock */,
 				50AA9E8A1CDA77470035B484 /* Sources */,
 				50AA9E8B1CDA77470035B484 /* Frameworks */,
 				50AA9E8C1CDA77470035B484 /* Resources */,
+				7F2564B337C6ACA38646067F /* Embed Pods Frameworks */,
+				E79AB6880B341083BA6E09D7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,10 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A215943B1B94D79300F2F665 /* Build configuration list for PBXNativeTarget "DSON" */;
 			buildPhases = (
+				96BD8BC66431F4E8E3DD4C5C /* Check Pods Manifest.lock */,
 				A21594221B94D79300F2F665 /* Sources */,
 				A21594231B94D79300F2F665 /* Frameworks */,
 				A21594241B94D79300F2F665 /* Headers */,
 				A21594251B94D79300F2F665 /* Resources */,
+				BC562ABFDEE3F7053D8B4F10 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -211,11 +251,90 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2648107BD619DB76356C25EA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7F2564B337C6ACA38646067F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSONTests/Pods-DSONTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96BD8BC66431F4E8E3DD4C5C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BC562ABFDEE3F7053D8B4F10 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSON/Pods-DSON-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E79AB6880B341083BA6E09D7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DSONTests/Pods-DSONTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		50AA9E8A1CDA77470035B484 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FE49791CF79CAA0073806E /* ClassTests.swift in Sources */,
 				50AA9E911CDA77470035B484 /* ConversionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +361,7 @@
 /* Begin XCBuildConfiguration section */
 		50AA9E971CDA77470035B484 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0124D0BB173C6F5690ACA67 /* Pods-DSONTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				INFOPLIST_FILE = DSONTests/Info.plist;
@@ -255,6 +375,7 @@
 		};
 		50AA9E981CDA77470035B484 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 390E9E90612208D4F6156DAF /* Pods-DSONTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				INFOPLIST_FILE = DSONTests/Info.plist;
@@ -357,6 +478,7 @@
 		};
 		A215943C1B94D79300F2F665 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64D60D798B666BE3D4040E4A /* Pods-DSON.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -375,6 +497,7 @@
 		};
 		A215943D1B94D79300F2F665 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFBB751B399BC651C037DB1E /* Pods-DSON.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;

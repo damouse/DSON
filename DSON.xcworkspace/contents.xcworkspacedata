@@ -7,4 +7,7 @@
    <FileRef
       location = "group:/Users/damouse/code/swift/dson/DSON.playground">
    </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>
