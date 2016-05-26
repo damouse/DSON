@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		50AA9E911CDA77470035B484 /* ConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AA9E901CDA77470035B484 /* ConversionTests.swift */; };
 		50AA9EA11CDA792B0035B484 /* DSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21594271B94D79300F2F665 /* DSON.framework */; };
+		50FE49751CF7994A0073806E /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FE49741CF7994A0073806E /* Class.swift */; };
 		A215942B1B94D79300F2F665 /* DSON.h in Headers */ = {isa = PBXBuildFile; fileRef = A215942A1B94D79300F2F665 /* DSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A21594421B94D7CD00F2F665 /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21594411B94D7CD00F2F665 /* Convertible.swift */; };
 		A215944A1B94D85C00F2F665 /* DSON.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A21594491B94D85C00F2F665 /* DSON.podspec */; };
@@ -28,6 +29,7 @@
 		50AA9E8E1CDA77470035B484 /* DSON.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSON.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AA9E901CDA77470035B484 /* ConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionTests.swift; sourceTree = "<group>"; };
 		50AA9E921CDA77470035B484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50FE49741CF7994A0073806E /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Class.swift; sourceTree = "<group>"; };
 		A21594271B94D79300F2F665 /* DSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A215942A1B94D79300F2F665 /* DSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSON.h; sourceTree = "<group>"; };
 		A215942C1B94D79300F2F665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				A215942A1B94D79300F2F665 /* DSON.h */,
 				A21594411B94D7CD00F2F665 /* Convertible.swift */,
+				50FE49741CF7994A0073806E /* Class.swift */,
 				A215942C1B94D79300F2F665 /* Info.plist */,
 			);
 			name = DSON;
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FE49751CF7994A0073806E /* Class.swift in Sources */,
 				A21594421B94D7CD00F2F665 /* Convertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
