@@ -10,11 +10,19 @@ import XCTest
 @testable import DSON
 
 
-class Fox: DSON.Class {
+class Cat: Class {
+    var str: String?
+    var int: Int?
+    var bool: Bool?
+    var float: Float?
+    var double: Double?
     
+    // required init() {}
 }
 
 
 class ClassTests: XCTestCase {
-    
+    func testSimpleDictionaryFrom() {
+        
+    }
 }

@@ -32,7 +32,7 @@ public class Class: Silvery {
     //
     //      { "firstName": "anyrandomname" }
     //
-    // then this method should return:
+    // then this method should return the swift dictionary:
     //
     //      ["name": "firstName"]
     //
@@ -43,5 +43,13 @@ public class Class: Silvery {
     // ALWAYS call the superclass method when subclassing!
     public static func propertyKeysToJson() -> [String: String] {
         return [:]
+    }
+}
+
+extension Class: Convertible {
+    static func from<T>(from: T) throws -> Self {
+        
+        
+        throw ConversionError.ConvertibleFailed(from: T.self, type: self)
     }
 }
