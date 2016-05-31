@@ -23,6 +23,12 @@ class Cat: Class {
 
 class ClassTests: XCTestCase {
     func testSimpleDictionaryFrom() {
+        let a = try! Cat.from(["str": "str", "int": 1, "bool": true, "float": 12.34, "double": 56.78])
         
+        XCTAssert(a.str! == "str")
+        XCTAssert(a.int! == 1)
+        XCTAssert(a.bool! == true)
+        XCTAssert(a.float! == 12.34)
+        XCTAssert(a.double! == 56.78)
     }
 }

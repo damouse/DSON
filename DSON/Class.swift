@@ -11,7 +11,6 @@
 import Foundation
 import Silvery
 
-
 public class Class: Silvery {
     
     // All subclasses must be initializable without arguments so silvery can do its work
@@ -47,9 +46,34 @@ public class Class: Silvery {
 }
 
 extension Class: Convertible {
+    
     static func from<T>(from: T) throws -> Self {
+        // Automatically cover cases where "from" is not the correct type
+        let json = try convert(from, to: [String: AnyObject].self)
         
+        let ignored = ignoreProperties()
+        let transformed = propertyKeysToJson()
         
-        throw ConversionError.ConvertibleFailed(from: T.self, type: self)
+        // Instantiate self and assign values to it. Strangely the reference to "object" is not recognized as conforming to silvery without an explicit cast
+        var object = self.init()
+        var silveryReference = object as! Silvery
+        
+        for k in silveryReference.keys() {
+            if ignored.contains(k) { continue }
+            
+            // This is the name of the property. It could be switched out for another value based on propertyKeysToJson
+            var propertyName = k
+            
+            for (propertyKey, jsonKey) in transformed {
+                if jsonKey == propertyName {
+                    propertyName = propertyKey
+                    break
+                }
+            }
+            
+            try silveryReference.setValue(json[propertyName], forKey: propertyName)
+        }
+        
+        return object
     }
 }
