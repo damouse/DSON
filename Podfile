@@ -11,3 +11,7 @@ end
 target 'DSONTests' do
     pod 'Silvery', :path => '../silvery'
 end
+
+target 'TestingTarget' do
+    pod 'Silvery', :path => '../silvery'
+end

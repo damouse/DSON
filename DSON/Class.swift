@@ -47,17 +47,18 @@ public class Class: Silvery {
 
 extension Class: Convertible {
     
-    static func from<T>(from: T) throws -> Self {
+    public static func from<T>(from: T) throws -> Self {
         // Automatically cover cases where "from" is not the correct type
         let json = try convert(from, to: [String: AnyObject].self)
+        print("Have json: \(json)")
         
         let ignored = ignoreProperties()
         let transformed = propertyKeysToJson()
         
         // Instantiate self and assign values to it. Strangely the reference to "object" is not recognized as conforming to silvery without an explicit cast
-        var object = self.init()
+        var object = self.init()        
         var silveryReference = object as! Silvery
-        
+
         for k in silveryReference.keys() {
             if ignored.contains(k) { continue }
             
@@ -71,9 +72,20 @@ extension Class: Convertible {
                 }
             }
             
-            try silveryReference.setValue(json[propertyName], forKey: propertyName)
+            let newValue = json[propertyName]! as! Property
+            print("Setting property \(propertyName) to \(newValue)")
+            
+            // Need to run one more round of conversion so the newValue is the right type
+            // Silvery does not do this, but it also doesn't report the type of property well (or at all?)
+            
+            try silveryReference.setValue(newValue as! Property, forKey: propertyName)
         }
         
+        print("Returning object: \(object)")
         return object
     }
 }
+
+
+
+
