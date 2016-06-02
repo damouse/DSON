@@ -22,7 +22,7 @@ public class Class: Silvery {
         return []
     }
     
-    // Reflects differences betweeen property names on this class and resulting json 
+    // Reflects differences betweeen property names on dynamicTypedynamicTypethis class and resulting json
     // For example, if this class has a property called "name":
     //
     //      var name: String = "anyrandomname"
@@ -72,13 +72,19 @@ extension Class: Convertible {
                 }
             }
             
-            let newValue = json[propertyName]! as! Property
-            print("Setting property \(propertyName) to \(newValue)")
+            // Get the new value from the json, get the type information from the silvery object, and make sure the new value is the correct type
+            let raw = json[propertyName]!
+            let type = try silveryReference.typeForKey(propertyName)!
             
-            // Need to run one more round of conversion so the newValue is the right type
-            // Silvery does not do this, but it also doesn't report the type of property well (or at all?)
+            print("Have type: \(type)")
             
-            try silveryReference.setValue(newValue as! Property, forKey: propertyName)
+            try convert(raw, to: type)
+            
+            let convertibleType = type.dynamicType as! Convertible.Type
+            let converted = try convertibleType.from(raw) as! Property
+            
+            print("Setting property \(propertyName) to \(converted)")
+            try silveryReference.setValue(converted, forKey: propertyName)
         }
         
         print("Returning object: \(object)")
