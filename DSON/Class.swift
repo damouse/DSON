@@ -9,6 +9,8 @@
 //  I'm not entirely happy with this decision, but the code here should be pretty portable
 
 import Foundation
+
+/*
 import Silvery
 
 public class Class: Silvery {
@@ -93,5 +95,5 @@ extension Class: Convertible {
         return object
     }
 }
-
+*/
 

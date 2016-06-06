@@ -16,5 +16,5 @@ Pod::Spec.new do |s|
     s.source_files  = "DSON", "DSON/**/*.{swift,h,m}"
     s.requires_arc = true
     
-    s.dependency = 'Silvery', '~> 1.0.0'
+    # s.dependency = 'Silvery', '~> 1.0.0'
 end

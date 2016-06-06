@@ -8,8 +8,7 @@
 
 import Foundation
 
-
-protocol Convertible {
+public protocol Convertible {
     // Convert the given argument to this type. Assumes "T as? Self", has already been tried, or in other words checking
     // if no conversion is needed.
     static func from<T>(from: T) throws -> Self
@@ -50,7 +49,7 @@ public func convert<A, B>(from: A, to: B.Type) throws -> B {
 
 // Convertible builtin overrides
 extension Bool : Convertible {
-    static func from<T>(from: T) throws -> Bool {
+    public static func from<T>(from: T) throws -> Bool {
         // Convert from Foundation
         if let from = from as? ObjCBool {
             return from.boolValue
@@ -61,7 +60,7 @@ extension Bool : Convertible {
 }
 
 extension Array: Convertible {
-    static func from<T>(from: T) throws -> Array {
+    public static func from<T>(from: T) throws -> Array {
         
         // Dont have to check for swift arrays here, they'll bridge to NSArrays
         if let from = from as? NSArray {
@@ -75,7 +74,7 @@ extension Array: Convertible {
 }
 
 extension Dictionary: Convertible {
-    static func from<T>(from: T) throws -> Dictionary {
+    public static func from<T>(from: T) throws -> Dictionary {
         
         // Like Array from, we don't have to check for swift Dictionaries, they'll bridge over
         if let from = from as? NSDictionary {
