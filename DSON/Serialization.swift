@@ -16,7 +16,15 @@ import SwiftyJSON
 // This serialization mostly means turning objects and structs into Dictionaries recursively
 // Returns a SwiftyJSON object. Raw JSON can be retrieved by accessing .rawData on the result
 public func serialize(from: AnyObject) throws -> JSON {
-    let json = JSON(from)
+    var target = from
+    
+    // Ask the target to serialize itself
+    if let convertible = target as? Convertible {
+        target = try convertible.serialize()
+    }
+    
+    // Convert it to json and return
+    let json = JSON(target)
     
     if json.type == .Unknown {
         throw ConversionError.JSONFailed(type: from.dynamicType, error: json.error!.localizedDescription)

@@ -117,8 +117,20 @@ extension Dictionary: Convertible {
     
     // TODO: Implement me once the objects are all set up and dandy
     public func serialize() throws -> AnyObject {
-        let ret = self as! AnyObject
-        return ret
+        var ret: [String: AnyObject] = [:]
+        
+        for (key, value) in self {
+            let k = key as! String
+            
+            if let convertible = value as? Convertible {
+                ret[k] = try convertible.serialize()
+            } else {
+                ret[k] = value as! AnyObject
+            }
+        }
+        
+        let cast = ret as! AnyObject
+        return cast
     }
 }
 
