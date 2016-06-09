@@ -41,4 +41,50 @@ class SerializationTests: XCTestCase {
         let serialized = try! serialize(a)
         XCTAssert(serialized.double! == a)
     }
+    
+    
+    // Foundation Primitives
+    func testNSString() {
+        let a: NSString = "hello"
+        let serialized = try! serialize(a)
+        XCTAssert(serialized.string! == "hello")
+    }
+    
+    func testNSInt() {
+        let a: NSNumber = 123
+        let serialized = try! serialize(a)
+        XCTAssert(serialized.int! == a)
+    }
+    
+    
+    // Collections
+    func testArray() {
+        let a: [AnyObject] = ["a", 1]
+        let serialized = try! serialize(a)
+        
+        XCTAssert(serialized.array![0].string! == "a")
+        XCTAssert(serialized.array![1].int! == 1)
+    }
+    
+    func testNSArray() {
+        let a = NSArray(array: ["a", 1])
+        let serialized = try! serialize(a)
+        
+        XCTAssert(serialized.array![0].string! == "a")
+        XCTAssert(serialized.array![1].int! == 1)
+    }
+    
+    func testDict() {
+        let a: [String: AnyObject] = ["a": 1]
+        let serialized = try! serialize(a)
+        
+        XCTAssert(serialized.dictionaryValue["a"] == 1)
+    }
+    
+    func testNSDict() {
+        let a = NSDictionary(dictionary: ["a": 1])
+        let serialized = try! serialize(a)
+        
+        XCTAssert(serialized.dictionaryValue["a"] == 1)
+    }
 }
