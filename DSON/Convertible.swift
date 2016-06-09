@@ -12,6 +12,9 @@ public protocol Convertible {
     // Convert the given argument to this type. Assumes "T as? Self", has already been tried, or in other words checking
     // if no conversion is needed.
     static func from<T>(from: T) throws -> Self
+    
+    // Prepare this object for conversion to JSON
+    func serialize() throws -> AnyObject
 }
 
 
@@ -59,6 +62,10 @@ extension Bool : Convertible {
         
         throw ConversionError.ConvertibleFailed(from: T.self, type: self)
     }
+    
+    public func serialize() throws -> AnyObject {
+        return self
+    }
 }
 
 extension Array: Convertible {
@@ -72,6 +79,22 @@ extension Array: Convertible {
         }
         
         throw ConversionError.ConvertibleFailed(from: T.self, type: self)
+    }
+    
+    public func serialize() throws -> AnyObject {
+        var ret = self as! AnyObject
+        
+        // Recursively ask elements to serialize themselves iff they're convertibles
+        if let _ = Element.self as? Convertible.Type {
+            let serialized = try self.map() { (element: Element) throws -> AnyObject in
+                let serializable = element as! Convertible
+                return try serializable.serialize()
+            }
+            
+             ret = serialized
+        }
+        
+        return ret
     }
 }
 
@@ -90,6 +113,12 @@ extension Dictionary: Convertible {
         }
         
         throw ConversionError.ConvertibleFailed(from: T.self, type: self)
+    }
+    
+    // TODO: Implement me once the objects are all set up and dandy
+    public func serialize() throws -> AnyObject {
+        let ret = self as! AnyObject
+        return ret
     }
 }
 
