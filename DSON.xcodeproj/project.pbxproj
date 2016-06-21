@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		18018305752D6D96CAB3B726 /* Pods_TestingTarget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48967C228B16DC1906FB2C44 /* Pods_TestingTarget.framework */; };
 		1BFE1312DD67EA622034F64C /* Pods_DSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ACC1621CA3BD75646A8CCE /* Pods_DSON.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5010D3701D19FC250079333F /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5010D36F1D19FC250079333F /* Object.swift */; };
+		5010D3721D1A00FC0079333F /* ObjectSerializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5010D3711D1A00FC0079333F /* ObjectSerializationTests.swift */; };
+		5010D3741D1A01340079333F /* ObjectAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5010D3731D1A01340079333F /* ObjectAssignmentTests.swift */; };
 		50AA9E911CDA77470035B484 /* ConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AA9E901CDA77470035B484 /* ConversionTests.swift */; };
 		50AA9EA11CDA792B0035B484 /* DSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21594271B94D79300F2F665 /* DSON.framework */; };
 		50AFBA351CFFA55C00501339 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AFBA341CFFA55C00501339 /* AppDelegate.swift */; };
@@ -38,6 +41,9 @@
 		1B90EB03D294D6FF56BF48F7 /* Pods-TestingTarget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingTarget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingTarget/Pods-TestingTarget.debug.xcconfig"; sourceTree = "<group>"; };
 		390E9E90612208D4F6156DAF /* Pods-DSONTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSONTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DSONTests/Pods-DSONTests.release.xcconfig"; sourceTree = "<group>"; };
 		48967C228B16DC1906FB2C44 /* Pods_TestingTarget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingTarget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5010D36F1D19FC250079333F /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Object.swift; path = DSON/Object.swift; sourceTree = SOURCE_ROOT; };
+		5010D3711D1A00FC0079333F /* ObjectSerializationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectSerializationTests.swift; path = DSONTests/ObjectSerializationTests.swift; sourceTree = SOURCE_ROOT; };
+		5010D3731D1A01340079333F /* ObjectAssignmentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObjectAssignmentTests.swift; path = DSONTests/ObjectAssignmentTests.swift; sourceTree = SOURCE_ROOT; };
 		50AA9E8E1CDA77470035B484 /* DSON.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSON.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50AA9E901CDA77470035B484 /* ConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionTests.swift; sourceTree = "<group>"; };
 		50AA9E921CDA77470035B484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +113,8 @@
 			children = (
 				50AA9E901CDA77470035B484 /* ConversionTests.swift */,
 				50E1C7941D09A6570035144F /* SerializationTests.swift */,
+				5010D3711D1A00FC0079333F /* ObjectSerializationTests.swift */,
+				5010D3731D1A01340079333F /* ObjectAssignmentTests.swift */,
 				50AA9E921CDA77470035B484 /* Info.plist */,
 			);
 			name = DSONTests;
@@ -178,6 +186,7 @@
 				A215942A1B94D79300F2F665 /* DSON.h */,
 				A21594411B94D7CD00F2F665 /* Convertible.swift */,
 				50E1C7961D09A6CE0035144F /* Serialization.swift */,
+				5010D36F1D19FC250079333F /* Object.swift */,
 				A215942C1B94D79300F2F665 /* Info.plist */,
 			);
 			name = DSON;
@@ -457,6 +466,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				50E1C7951D09A6570035144F /* SerializationTests.swift in Sources */,
+				5010D3741D1A01340079333F /* ObjectAssignmentTests.swift in Sources */,
+				5010D3721D1A00FC0079333F /* ObjectSerializationTests.swift in Sources */,
 				50AA9E911CDA77470035B484 /* ConversionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50E1C7971D09A6CE0035144F /* Serialization.swift in Sources */,
+				5010D3701D19FC250079333F /* Object.swift in Sources */,
 				A21594421B94D7CD00F2F665 /* Convertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
