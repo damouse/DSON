@@ -12,7 +12,7 @@ pod 'DSON', '~> 1.0.2'
 
 ## Usage
 
-### Making JSON from stuff
+### Turning stuff into JSON
 
 DSON can convert boring things to json.
 
@@ -23,7 +23,7 @@ print(json.rawString())
 // => {"apple":"boy", "cat":14}
 ```
 
-But it can automatically serialize objects that subclass `Class`: 
+But it can also automatically serialize objects that subclass `DSON.Class`: 
 
 ```swift 
 class Shark: Class {
@@ -62,16 +62,16 @@ print(json.rawString())
 // => {"members": [{"name": Jill}, {"name": Steve}, {"name": Judy}] }
 ```
 
-### Making stuff from other stuff
+### Turning stuff into other stuff
 
-DSON can turn arbitrary stuff into other stuff using the `convert` function. 
+The `convert` function attempts to turn any arbitrary argument into a passed type:
 
 ```swift
 let objectiveString = NSString(string: "apple")
 let swiftString = try DSON.convert(objectiveString, to: String.self)
 ```
 
-Also works for nested collections of normally unfun things: 
+Also works for collections and nested conversions. Here we start with an NSArray that contains NSStrings and end up with an Array<String>, or a swift array with swift strings:
 
 ```swift
 let yuck: NSArray = NSArray(objects: NSString(string: "apple"), NSString(string: "boy"))
@@ -80,7 +80,7 @@ let yum = try DSON.convert(yuck, to: [String].self)
 // => ["apple", "boy"] of type: Array<String>
 ```
 
-You can of course turn json back into objects: 
+Finally, you can of course turn json back into objects: 
 
 ```swift
 class Fish: Class {
@@ -91,4 +91,16 @@ class Fish: Class {
 let a = try Fish.from(["bool": true, "float": 12.34])
 }
 ```
+
+## Guide
+
+### Convert
+
+The convert function takes a variable and a type and tries to turn the variable into that type. 
+
+## To Do
+
+- Struct conversion and serialization
+- Enum conversion and serialization
+
 

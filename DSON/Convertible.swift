@@ -36,19 +36,19 @@ public enum ConversionError : ErrorType, CustomStringConvertible {
 // Conversion methods should do all kinds of conversion in the absence of the deferred system
 // This method is for single value targets and sources
 // This works a lot like GSON for Android: give me something and tell me how you want it
-public func convert<A, B>(from: A, to: B.Type) throws -> B {
+public func convert<A>(from: Any, to: A.Type) throws -> A {
     
     // Catch a suprising majority of simple conversions where Swift can bridge or handle the type conversion itself
-    if let simpleCast = from as? B {
+    if let simpleCast = from as? A {
         return simpleCast
     }
     
     // If B conforms to Convertible then the type has conversion overrides that may be able to handle the conversion
-    if let convertible = B.self as? Convertible.Type {
-        return try convertible.from(from) as! B
+    if let convertible = A.self as? Convertible.Type {
+        return try convertible.from(from) as! A
     }
     
-    throw ConversionError.NoConversionPossible(from: A.self, type: to.self)
+    throw ConversionError.NoConversionPossible(from: from.dynamicType, type: to.self)
 }
 
 
