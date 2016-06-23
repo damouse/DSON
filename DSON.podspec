@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "DSON"
-    s.version      = "1.0.1"
+    s.version      = "1.0.2"
     s.summary      = "Damouse's GSON for Swift: type-based value conversion"
     s.description  = <<-DESC
                         Damouse's GSON for Swift: type-based value conversion.
@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
     s.source_files  = "DSON", "DSON/**/*.{swift,h,m}"
     s.requires_arc = true
     
-    s.dependency = 'Silvery', '~> 1.0.0'
+    s.dependency = 'Silvery', '~> 1.0.2'
     s.dependency 'SwiftyJSON', '~> 2.3.1'
 end
